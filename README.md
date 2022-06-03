@@ -75,9 +75,9 @@ Una vez hecho eso, en la consola nos va a dar la direccion en la cual esta aloja
 ### 6- Cerrar aplicación
 Cuando querramos cerrar la aplicacion simplemente usamos el siguiente comando:
 
-> ``ddev poweroff`
+> ``ddev poweroff``
 
 ### Juega en cualquier momento!
 Una vez que ya hayas configurado todo, no hay necesidad de hacerlo de nuevo si no que con el siguiente comando y entrando a la URL anteriormente mencionada en el paso 5 podremos jugar:
 
-> ``ddev start`
+> ``ddev start``
