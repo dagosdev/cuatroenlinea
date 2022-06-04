@@ -29,6 +29,19 @@ Una vez tengamos eso configurado, lo podremos inicializar:
 
 > ``ddev start``
 
-![Captura de inicialización del proyecto en ddev](captura1.png)
+![Captura de "ddev config" y "ddev start"](captura1.png)
 
-<p align="center">Captura de visualización en consola.</p>
+<p align="center">Visualización en consola.</p>
+
+<br/>
+### 2- Verificación con composer
+
+`Composer` es el gestor de dependencias encargado de php. Tenemos que asegurarnos de tener todos los paquetes actualizados a la fecha. Para ello, primero nos conectaremos al servidor local y luego verificaremos que esté actualizado con los siguentes comandos:
+
+> ``ddev ssh`` y ``composer update``
+
+![Captura de "ddev ssh"](captura3.jpg)
+
+![Captura de "composer update"](captura2.jpg)
+
+<p align="center">Visualización en consola.</p>
