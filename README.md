@@ -31,17 +31,27 @@ Una vez tengamos eso configurado, lo podremos inicializar:
 
 ![Captura de "ddev config" y "ddev start"](captura1.png)
 
-<p align="center">Visualización en consola.</p>
-
 <br/>
+
 ### 2- Verificación con composer
 
 `Composer` es el gestor de dependencias encargado de php. Tenemos que asegurarnos de tener todos los paquetes actualizados a la fecha. Para ello, primero nos conectaremos al servidor local y luego verificaremos que esté actualizado con los siguentes comandos:
 
 > ``ddev ssh`` y ``composer update``
 
-![Captura de "ddev ssh"](captura3.jpg)
+![Captura de "ddev ssh"](captura3.png)
 
-![Captura de "composer update"](captura2.jpg)
+![Captura de "composer update"](captura2.png)
 
-<p align="center">Visualización en consola.</p>
+<br/>
+
+### 3- Crear archivo de ambiente
+
+Un paso importante por hacer previo a intentar correr la aplicación es crear el archivo de ambiente del proyecto, aka ``.env``. La mayoría del contenido de este ya está incluido en ``.env.example``. Sin embargo, le agregaremos dos líneas adicionales para garantizar los permisos de ejecución necesarios durante la ejecución de ``laravel/sail``. Para hacerlo utilizaremos los siguientes comandos:
+
+> ``ls -la``
+> ``cp .env.example .env ``
+>``echo "WWWGROUP=1000" >> .env``
+>``echo "WWWUSER=1000" >> .env``
+
+Con estas 4 líneas nos ahorraremos algunos errores de código https 500 al querer ejecutar laravel/sail.
