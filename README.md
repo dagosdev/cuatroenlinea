@@ -51,7 +51,13 @@ Un paso importante por hacer previo a intentar correr la aplicación es crear el
 
 > ``ls -la``
 > ``cp .env.example .env ``
->``echo "WWWGROUP=1000" >> .env``
->``echo "WWWUSER=1000" >> .env``
+> ``echo "WWWGROUP=1000" >> .env``
+> ``echo "WWWUSER=1000" >> .env``
 
 Con estas 4 líneas nos ahorraremos algunos errores de código https 500 al querer ejecutar laravel/sail.
+
+### 4- Creación de clave
+
+Otro detalle importante es crear una clave de aplicacion para nuestro proyecto:
+
+> ``php artisan key:generate``
