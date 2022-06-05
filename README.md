@@ -65,6 +65,20 @@ Una vez completados todos los pasos, deberíamos salir del servidor local y rein
 
 > ``exit`` ``ddev restart``
 
-![Caotura de "exit" y "ddev restart"](captura4.png)
+![Captura de "exit" y "ddev restart"](captura4.png)
 
-Listo!! Ahora para jugar solo debemos ingresar uno de los enlaces (el de preferencia) que nos aparece en la consola agregándole "jugar/1" y ya estaríamos jugando.
+Listo!! Ahora para jugar solo debemos ingresar uno de los enlaces (el de preferencia) que nos aparece en la consola agregándole "jugar/1" al final y ya estaríamos jugando.
+
+### 6- Cerrar aplicación
+
+Cuando dejemos de jugar y querramos cerrar la aplicación, solo deberíamos usar el siguiente comando en la consola.
+
+> ``ddev poweroff``
+
+### Disfruta y juega!!
+
+Ya configurado todo, no hay necesidad de hacerlo nuevamente si no que con el siguiente comando y entrando a cualquiera de las URLs anteriormente mencionadas en el paso 5 podremos jugar.
+
+> ``ddev start``
+
+![Captura de "ddev poweroff" y "ddev start"](captura5.png)
