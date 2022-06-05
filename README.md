@@ -49,10 +49,7 @@ Una vez tengamos eso configurado, lo podremos inicializar:
 
 Un paso importante por hacer previo a intentar correr la aplicación es crear el archivo de ambiente del proyecto, aka ``.env``. La mayoría del contenido de este ya está incluido en ``.env.example``. Sin embargo, le agregaremos dos líneas adicionales para garantizar los permisos de ejecución necesarios durante la ejecución de ``laravel/sail``. Para hacerlo utilizaremos los siguientes comandos:
 
-> ``ls -la``
-> ``cp .env.example .env ``
-> ``echo "WWWGROUP=1000" >> .env``
-> ``echo "WWWUSER=1000" >> .env``
+> ``ls -la`` ``cp .env.example .env `` ``echo "WWWGROUP=1000" >> .env`` ``echo "WWWUSER=1000" >> .env``
 
 Con estas 4 líneas nos ahorraremos algunos errores de código https 500 al querer ejecutar laravel/sail.
 
@@ -61,3 +58,13 @@ Con estas 4 líneas nos ahorraremos algunos errores de código https 500 al quer
 Otro detalle importante es crear una clave de aplicacion para nuestro proyecto:
 
 > ``php artisan key:generate``
+
+### 5- Correr aplicación
+
+Una vez completados todos los pasos, deberíamos salir del servidor local y reiniciar el proyacto para ya poder por  fin poder disfrutar de este fabuloso juego. Esto lo realizaremos, al igual que los anteriores pasos, colocando los siguientes comandos en la consola.
+
+> ``exit`` ``ddev restart``
+
+![Caotura de "exit" y "ddev restart"](captura4.png)
+
+Listo!! Ahora para jugar solo debemos ingresar uno de los enlaces (el de preferencia) que nos aparece en la consola agregándole "jugar/1" y ya estaríamos jugando.
