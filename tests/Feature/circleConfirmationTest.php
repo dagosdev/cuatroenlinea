@@ -13,9 +13,16 @@ class circleConfirmationTest extends TestCase
      *
      * @return void
      */
-    public function test_example()
+    public function test_blue_circle()
     {
-        $response = $this->get('/');
+        $response = $this->get('/jugar/1');
+
+        $response->assertStatus(200);
+    }
+
+    public function test_red_circle()
+    {
+        $response = $this->get('/jugar/12');
 
         $response->assertStatus(200);
     }

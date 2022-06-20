@@ -13,7 +13,7 @@ class playConfirmationTest extends TestCase
      *
      * @return void
      */
-    public function test_example()
+    public function test_page_response()
     {
         $response = $this->get('/jugar/1');
 
