@@ -34,13 +34,10 @@ Ahora lo podemos iniciar con:
 <br/>
 
 ### 2- Verificación con composer
-Nos conectamos al servidor local con:
-
-> ``ddev ssh``
 
 `Composer` es el gestor que vamos a usar para las dependencias de php, lo actualizamos con el siguiente comando:
 
->``composer update``
+>``ddev composer install``
 
 <br/>
 
@@ -49,8 +46,11 @@ Nos conectamos al servidor local con:
 Las siguientes lineas son para asegurarnos que las variables del ambiente estan bien copiadas, ademas usamos los ultimos dos comandos para que no haya errores de permisos:
 
 > ``ls -la``
+
 > ``cp .env.example .env ``
+
 >``echo "WWWGROUP=1000" >> .env``
+
 >``echo "WWWUSER=1000" >> .env``
 
 <br/>
