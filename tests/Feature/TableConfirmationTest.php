@@ -19,4 +19,16 @@ class TableConfirmationTest extends TestCase
 
         $this->assertTrue(substr_count($html,'bg-gray-200') == 41);
     }
+    public function test_counting_red_squares()
+    {
+        $html = file_get_contents('https://cuatroenlinea.ddev.site/jugar/1222345');
+
+        $this->assertTrue(substr_count($html,'bg-red-500') == 4);
+    }
+    public function test_counting_blue_squares()
+    {
+        $html = file_get_contents('https://cuatroenlinea.ddev.site/jugar/12223334');
+
+        $this->assertTrue(substr_count($html,'bg-sky-500') == 4);
+    }
 }
