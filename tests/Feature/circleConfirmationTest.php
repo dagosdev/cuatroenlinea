@@ -13,17 +13,17 @@ class circleConfirmationTest extends TestCase
      *
      * @return void
      */
-    public function test_blue_circle()
+    public function test_blue_circle_top()
     {
-        $response = $this->get('/jugar/1');
+        $html = file_get_contents('https://cuatroenlinea.ddev.site/jugar/1');
 
-        $response->assertStatus(200);
+        $this->assertTrue(substr_count($html,'hover:bg-sky-500') == 7);
     }
 
-    public function test_red_circle()
+    public function test_red_circle_top()
     {
-        $response = $this->get('/jugar/12');
+        $html = file_get_contents('https://cuatroenlinea.ddev.site/jugar/12');
 
-        $response->assertStatus(200);
+        $this->assertTrue(substr_count($html,'hover:bg-red-500') == 7);
     }
 }
