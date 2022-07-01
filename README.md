@@ -62,3 +62,40 @@ If you discover a security vulnerability within Laravel, please send an e-mail t
 ## License
 
 The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+
+## Cuatro en línea online.
+
+En este proyecto, junto con mis compañeros de 6to año Informática del Politecnico Rosario, vamos dar función al juego "Cuatro en Linea" en un servidor web. Este proyecto es llevado a cabo en la materia AAT.
+
+## Como adaptar nuestro proyecto a un entorno con Laravel
+ 
+### Prerrequisitos
+    Para comenzar con la configuracion, debemos instalar los siguientes softwares, lo podemos realizar desde los links a continuacion:
+ - DDEV (https://ddev.readthedocs.io/en/stable/)
+ - Docker (https://docs.docker.com/desktop/) 
+ - Composer (https://getcomposer.org/download/)
+
+    Para que no queden dudas sobre la instalacion de estas herramientas, proporciono links a videos que pueden ser de ayuda :) 
+    - Docker (https://www.youtube.com/watch?v=6idFknRIOp4)
+    - Composer (https://www.youtube.com/watch?v=tpihb48mTyA)
+
+## Configuración
+    Una vez instaladas todas las herramientas, procederemos a su configuración.
+
+## Instrucciones
+
+### Descargar el repositorio en el directorio local de nuestra PC:
+    Para esto debemos ejecutar este comando en la consola: 
+    [git clone https://github.com/lautaronestares/cuatroenlinea.git]
+### Configuracion de Docker:
+    Debemos ejecutar [Docker Desktop] y una vez dentro debemos dirigirnos al directorio en el cual clonamos el proyecto.
+    La primer orden que debemos escribir en consola es la de 
+    [ddev config]
+    este comando sirve para configurar el contenedor propio de Docker en el cual vamos a estar trabajando.
+    El terminal nos pedirá un nombre para nuestro proyecto y una raiz para guardarlo, los cuales podemos dejar por defecto.
+    También nos pedirá especificar el tipo del proyecto, el cual debemos indicar como laravel.
+    
+    Una vez terminada esta pequeña configuracion lo iniciaremos introduciendo el comando:
+    [ddev start]
+    
+    
