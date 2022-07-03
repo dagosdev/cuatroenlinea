@@ -1,64 +1,88 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400"></a></p>
+## Requisitos.
 
-<p align="center">
-<a href="https://travis-ci.org/laravel/framework"><img src="https://travis-ci.org/laravel/framework.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+Para poder armar el proyecto en una computadora nueva se debera usar DDEV, Composer y Docker Desktop, ademas se usara Git para descargar y mantener un registro de los cambios en los archivos. A continuacion se incluyen links para poder instalarlos.
 
-## About Laravel
+DDEV: https://ddev.readthedocs.io/en/stable/
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+Composer: https://getcomposer.org/download/
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+Docker Desktop: https://www.docker.com/products/docker-desktop/
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+Git: https://git-scm.com/downloads
 
-## Learning Laravel
+## Procedimiento.
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+Para empezar se deben de descargar los archivos en una carpeta deseada. Para ello, usando la consola, dirijase a la carpeta seleccionada e ingrese los siguientes comandos:
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 1500 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+```cmd
+	git init
+```
+Permitira que git pueda interactuar con la carpeta.
 
-## Laravel Sponsors
+```
+	git clone https://github.com/MatiasMK/cuatroenlinea.git
+```
+Descargara los archivos de github en la carpeta.
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell).
+### 1- Configuracion de DDEV.
 
-### Premium Partners
+El siguiente paso a seguir es configurar un proyecto de DDEV para poder hacer que la página funcione.
+Ingresamos los siguientes comandos:
+```cmd
+	ddev config
+```
+Inicia el proceso de configuracion del proyecto y nos dara una respuesta como esta.
+```cmd
+	Project name (cuatroenlinea):
+```
+Aqui pondremos el nombre del proyecto, se lo puede dejar en blanco para usar el nombre anterior que seria `cuatroenlinea`.
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Cubet Techno Labs](https://cubettech.com)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[Many](https://www.many.co.uk)**
-- **[Webdock, Fast VPS Hosting](https://www.webdock.io/en)**
-- **[DevSquad](https://devsquad.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[OP.GG](https://op.gg)**
-- **[WebReinvent](https://webreinvent.com/?utm_source=laravel&utm_medium=github&utm_campaign=patreon-sponsors)**
-- **[Lendio](https://lendio.com)**
+Luego pedira la localizacion del `root` del proyecto. Debemos dejar esta casilla en blanco sin tocar nada.
+```cmd
+	You may leave this value blank if your site files are in the project root
+	Docroot Location (public):
+```
 
-## Contributing
+Al continuar, nos dara este mensaje:
+```cmd
+	Project Type [backdrop, drupal10, drupal6, drupal7, drupal8, drupal9, laravel, magento, magento2, php, shopware6, typo3, wordpress] (laravel):
+```
+Esto nos pide que ingresemos el tipo de proyecto que usaremos, en este caso elegiremos laravel.
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+Una vez terminado esto, nos dira que podemos iniciar el proyecto con el comando `ddev start`, al usarlo tardara un rato en terminar de configurar todo y luego nos dira que el proyecto esta iniciado.
 
-## Code of Conduct
+### 2- Actualizacion de Composer.
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
 
-## Security Vulnerabilities
+Para aplicar Composer al proyecto primero tendremos que ingresar el comando:
+```cmd
+	ddev ssh
+```
+para luego poder ingresar el comando:
+```cmd
+	composer install
+```
+Este proceso tardara un tiempo hasta que pueda instalar composer para su uso dentro del proyecto.
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+### 3- Configuraciones finales.
 
-## License
+Si el paso anterior concluyo de forma correcta ya solo queda crear un par de cosas mas para que el pryecto este listo para su uso.
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+Primero se crea el archivo de ambiente.
+```cmd
+	cp .env.example .env
+```
+
+Segundo se crea una llave de aplicacion del proyecto.
+```cmd
+	php artisan key:generate
+```
+
+Con este ultimo comando deberia estar todo preparado y listo para usar.
+
+### 4- Iniciar el producto listo para su uso.
+
+Primero se debe salir de la consola ssh usando el comando `exit` y se reinicia el proyecto con el comando `ddev restart`
+Se deberian ver dos links en una linea que dice `Your project can be reached at`, esos son los links de acceso al proyecto, basta con copiarlos y pegarlos en el buscador de preferencia y se podra acceder al proyecto.
+
+Cuando se use cualquiera de los dos links ellos dirigiran a una pagina de `laravel`, aqui es donde se encuentra nuestra página, con solo agregar la extension `/jugar/1` al link se puede acceder al juego de cuatro en linea con una ficha puesta en la posicion `1`.
